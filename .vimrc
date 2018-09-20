@@ -1,4 +1,5 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
 " Maintained
 "   Gerben van Rijswijk
 "   https://gerbenvanrijswijk.nl
@@ -9,6 +10,7 @@
 " 
 " Sources
 "   https://github.com/amix
+"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " filetype plugins (what does it do?)
