@@ -119,7 +119,7 @@
 
 [core]
     repositoryformatversion = 0
-    filemode = true
+	fileMode = false
     excludesFile = "~/.config/dotgit/ignore"
 
 [grep]
