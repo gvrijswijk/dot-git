@@ -21,11 +21,11 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Bundle 'gmarik/Vundle.vim'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'morhetz/gruvbox'
-Bundle 'tpope/vim-fugitive'
-Bundle 'airblade/vim-gitgutter'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'morhetz/gruvbox'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()
 
