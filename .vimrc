@@ -21,9 +21,11 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+Bundle 'gmarik/Vundle.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'morhetz/gruvbox'
+Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
 
 call vundle#end()
 
@@ -31,6 +33,9 @@ call vundle#end()
 " filetype plugins (what does it do?)
 filetype plugin on
 filetype indent on
+
+filetype on
+autocmd FileType python nnoremap <buffer> <F9> :exec '!clear; python' shellescape(@%, 1)<cr>
 
 syntax enable
 
@@ -57,3 +62,4 @@ set tabstop=4
 set ai
 set si
 set wrap
+
