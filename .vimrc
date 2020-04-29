@@ -30,6 +30,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-python/python-syntax'
 "Plugin 'w0rp/ale'
 Plugin 'jnurmine/Zenburn'
+Plugin 'junegunn/fzf'
+Plugin 'alok/notational-fzf-vim'
 
 call vundle#end()
 
@@ -75,3 +77,4 @@ set ai
 set si
 set wrap
 
+let g:nv_search_paths = ['~/Notes/', '~/.notes.md']
