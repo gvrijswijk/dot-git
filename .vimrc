@@ -76,4 +76,3 @@ let g:nv_search_paths = ['~/Notes/', '~/.notes.md']
 
 set updatetime=100
 let g:gitgutter_terminal_reports_focus=0
-
