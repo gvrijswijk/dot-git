@@ -8,6 +8,7 @@
 " Version
 "   0.01 - 2017/11/24
 "   0.02 - 2019/06/01 (Added Vundle, colorschemes)
+"   0.03 - 2020/05/01 (Added some plugins)
 " 
 " Sources
 "   https://github.com/amix
@@ -22,6 +23,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+Plugin 'bling/vim-bufferline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'morhetz/gruvbox'
 Plugin 'tpope/vim-fugitive'
@@ -44,22 +48,13 @@ filetype on
 let g:python_highlight_all = 1
 autocmd FileType python nnoremap <buffer> <F9> :exec '!clear; python' shellescape(@%, 1)<cr>
 
-if exists('&signcolumn')
-    set signcolumn=yes
-else
-    let g:gitgutter_sign_column_always = 1
-endif
-
 syntax enable
 
 set number
 
 set background=dark
 
-"colorscheme koehler
 colorscheme gruvbox
-"colorscheme solarized
-"colorscheme zenburn
 
 set laststatus=2
 set statusline=\ %F%m%r%h\ %w\ \ L:\ %l\ \ C:\ %c\ \ %{FugitiveStatusline()}
@@ -78,3 +73,7 @@ set si
 set wrap
 
 let g:nv_search_paths = ['~/Notes/', '~/.notes.md']
+
+set updatetime=100
+let g:gitgutter_terminal_reports_focus=0
+
