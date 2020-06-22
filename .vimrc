@@ -87,8 +87,10 @@ set ai
 set si
 set wrap
 
+" Notational fzf
 let g:nv_search_paths = ['~/Notes/', '~/.notes.md']
 
+" Vim-gitgutter
 set updatetime=100
 let g:gitgutter_terminal_reports_focus=0
 
