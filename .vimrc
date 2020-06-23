@@ -16,6 +16,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Vundle specific
+set path+=**
+set wildmenu
 set nocompatible
 filetype off
 
@@ -36,6 +38,12 @@ Plugin 'vim-python/python-syntax'
 Plugin 'jnurmine/Zenburn'
 Plugin 'junegunn/fzf'
 Plugin 'alok/notational-fzf-vim'
+Plugin 'Vimjas/vim-python-pep8-indent'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'junegunn/seoul256.vim'
+Plugin 'w0ng/vim-hybrid'
+Plugin 'cocopon/iceberg.vim'
+Plugin 'joshdick/onedark.vim'
 
 call vundle#end()
 
@@ -50,11 +58,18 @@ autocmd FileType python nnoremap <buffer> <F9> :exec '!clear; python' shellescap
 
 syntax enable
 
-set number
+set number relativenumber
+
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
 set background=dark
 
 colorscheme gruvbox
+"colorscheme zenburn
 
 set laststatus=2
 set statusline=\ %F%m%r%h\ %w\ \ L:\ %l\ \ C:\ %c\ \ %{FugitiveStatusline()}
@@ -76,3 +91,5 @@ let g:nv_search_paths = ['~/Notes/', '~/.notes.md']
 
 set updatetime=100
 let g:gitgutter_terminal_reports_focus=0
+
+command! MakeTags !ctags -R .
