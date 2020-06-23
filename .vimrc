@@ -44,6 +44,8 @@ Plugin 'junegunn/seoul256.vim'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'cocopon/iceberg.vim'
 Plugin 'joshdick/onedark.vim'
+Plugin 'crusoexia/vim-monokai'
+Plugin 'arcticicestudio/nord-vim'
 
 call vundle#end()
 
@@ -66,10 +68,9 @@ augroup numbertoggle
     autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
 augroup END
 
-set background=dark
 
 colorscheme gruvbox
-"colorscheme zenburn
+set background=dark
 
 set laststatus=2
 set statusline=\ %F%m%r%h\ %w\ \ L:\ %l\ \ C:\ %c\ \ %{FugitiveStatusline()}
