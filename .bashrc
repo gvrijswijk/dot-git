@@ -117,7 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 eval $(ssh-agent -s)
-ssh-add ~/.ssh/id_rsa
+ssh-add ~/.ssh/id_ed25519
 
 # In order for gpg to find gpg-agent, gpg-agent must be running, and there must be an env
 # variable pointing GPG to the gpg-agent socket. This little script, which must be sourced
