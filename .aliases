@@ -1,3 +1,13 @@
+# ~/.aliases
+
+# dot is the dotfiles specific git
 alias dot='PATH="$HOME/.config/dotgit/bin:$PATH" git --git-dir="$HOME/.config/dotgit/repo" --work-tree="$HOME"'
+
+# leave it in for now
 alias jupyter-notebook="jupyter-notebook --no-browser"
+
+# docker aliases (linuxserver.io)
 alias dtail-'docker logs -tf --tail="50" "$@"'
+alias dcup='docker-compose -f /opt/docker-compose.yml up -d'
+alias dcdown='docker-compose -f /opt/docker-compose.yml stop'
+alias dclogs='docker-compose -f /opt/docker-compose.yml logs -tf --tail="50"'
