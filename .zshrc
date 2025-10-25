@@ -87,19 +87,16 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-<<<<<<< HEAD
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
 #   export EDITOR='nvim'
 # fi
-=======
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
   export EDITOR='mvim'
 fi
->>>>>>> 71c4027 (Setup a few basic features)
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -115,8 +112,5 @@ fi
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-<<<<<<< HEAD
-=======
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
->>>>>>> 71c4027 (Setup a few basic features)
 alias dot='PATH="$HOME/.config/dotgit/bin:$PATH" git --git-dir="$HOME/.config/dotgit/repo" --work-tree="$HOME"'
